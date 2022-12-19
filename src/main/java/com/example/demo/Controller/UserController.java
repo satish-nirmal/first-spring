@@ -18,7 +18,12 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+        
+        @GetMapping("/home")
+        public String home(){
 
+        return "Welcome home";
+         }
 	
 	@GetMapping("/users")
 	public List<User> getAllUsers(){
